@@ -263,8 +263,7 @@ def DrawData(data, ax, args):
     ax: a matplotlib axis object
     args: an argparse arguments object
   """
-  ax.add_patch(patches.Polygon(data, alpha=0.5,
-                               color='#1f77b4'))
+  ax.add_patch(patches.Polygon(data, alpha=0.5, color='#1f77b4'))
 
 
 def main():
