@@ -1,0 +1,26 @@
+# https://github.com/dentearl/cairo_visualization_wheel
+# Lines that start with # are ignored
+#
+# One metric [0.0, 1.0] for each of six axes:
+# Note that the parenthetical value will be 1.0 - x.
+# 1.0 (0.0)
+# Abstraction (Figuration)
+# Functionality (Decoration)
+# Density (Lightness)
+# Multidimensionality (Unidimensionality)
+# Originality (Familiarity)
+# Novelty (Redundancy)
+#
+##############################
+# Abstraction (Figuration)
+0.8
+# Functionality (Decoration)
+0.6
+# Density (Lightness)
+0.6
+# Multidimensionality (Unidimensionality)
+0.7
+# Originality (Familiarity)
+0.6
+# Novelty (Redundancy)
+0.6
