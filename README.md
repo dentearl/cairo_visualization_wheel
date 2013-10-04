@@ -38,4 +38,4 @@ The input file may contain comment lines (lines that start with #). The file mus
 ![Example image](https://github.com/dentearl/cairo_visualization_wheel/raw/master/img/example.png)
 
 ## References
-* Alberto Cairo, _The Functional Art_, 2013 2013 New Riders, Berkeley, CA, USA. http://www.thefunctionalart.com/
+* Alberto Cairo, _The Functional Art_, 2013 New Riders, Berkeley, CA, USA. http://www.thefunctionalart.com/
