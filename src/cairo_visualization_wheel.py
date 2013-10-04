@@ -53,6 +53,11 @@ class BadInput(Exception):
 
 
 def InitArguments(parser):
+  """Initialize arguments for the program.
+
+  Args:
+    parser: an argparse parser object
+  """
   parser.add_argument('metrics_file', type=str,
                       help='path to metrics file.')
   parser.add_argument(
@@ -73,6 +78,12 @@ def InitArguments(parser):
 
 
 def CheckArguments(args, parser):
+  """Verify that input arguments are correct and sufficient.
+
+  Args:
+    args: an argparse arguments object
+    parser: an argparse parser object
+  """
   if args.metrics_file is None:
     parser.error('Specify a path to a metrics_file to read')
   if args.out_format not in ('all', 'eps', 'pdf', 'png'):
