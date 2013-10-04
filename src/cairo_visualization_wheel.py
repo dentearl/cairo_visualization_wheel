@@ -31,13 +31,17 @@ visualization" by Alberto Cairo, 2013 New Riders, Berkeley, CA, USA.
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 ##############################
+# plotting boilerplate
 import matplotlib
 matplotlib.use('Agg')
+# pdf.fonttype : Output Type 3 (Type3) or Type 42 (TrueType)
+matplotlib.rcParams['pdf.fonttype'] = 42
 import matplotlib.backends.backend_pdf as pltBack
 import matplotlib.lines as lines
 import matplotlib.patches as patches
 import matplotlib.pyplot as plt
 import numpy
+##############################
 from argparse import ArgumentParser
 import os
 import sys
@@ -78,6 +82,10 @@ def CheckArguments(args, parser):
   if args.height < 1:
     parser.error('height setting --height %d is too low. Must be >= 1.'
                  % args.height)
+  extension = args.out.split('.')[-1]
+  if extension in ('all', 'eps', 'pdf', 'png'):
+    # if supplied, remove the extension since we append it at the end
+    args.out, extension = os.path.splitext(args.out)
 
 
 def InitImage(args):
