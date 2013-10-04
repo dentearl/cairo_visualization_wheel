@@ -155,7 +155,6 @@ def DrawAxis(ax, args):
     ax: a matplotlib axis object
     args: an argparse arguments object
   """
-  ax.set_rmax(1.1)
   ax.grid(False)
   thetas = []
   angles = []
@@ -163,7 +162,7 @@ def DrawAxis(ax, args):
                   'Functionality', 'Decoration',
                   'Density', 'Lightness',
                   'Multidimensionality', 'Unidimensionality',
-                  'Originality', 'Familarity',
+                  'Originality', 'Familiarity',
                   'Novelty', 'Redundancy']
   for i in xrange(0, 6):
     offset_theta = numpy.pi / 12.0
@@ -182,9 +181,10 @@ def DrawAxis(ax, args):
         color='grey',
         linewidth=.75,
       ))
-  ax.plot(thetas, 12 * [1.0], markeredgecolor='red', marker='o',
-          markerfacecolor='red', linestyle='none')
+  ax.plot(thetas, 12 * [1.0], markeredgecolor='grey', marker='o',
+          markerfacecolor='grey', linestyle='none')
   # ax.set_title("Cairo Visualization Wheel", va='bottom')
+  ax.set_rmax(1.15)
   ax.set_yticklabels([])
   ax.set_thetagrids(angles, labels=angle_labels, fontsize=8.0)
 
