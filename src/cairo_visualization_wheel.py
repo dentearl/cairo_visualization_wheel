@@ -234,7 +234,7 @@ def ReadData(args):
 
 
 def CleanData(data, args):
-  """Read the data and convert it into a form we can plot directly
+  """Read the data and convert it into a form we can plot directly.
 
   Args:
     data: a list of six floats in [0.0, 1.0]
