@@ -31,10 +31,12 @@ visualization" by Alberto Cairo, 2013 New Riders, Berkeley, CA, USA.
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 ##############################
-# plotting boilerplate
+# plotting boilerplate / cargo cult
 import matplotlib
 matplotlib.use('Agg')
-# pdf.fonttype : Output Type 3 (Type3) or Type 42 (TrueType)
+#####
+# the param pdf.fonttype allows for text to be editable in Illustrator.
+# Use either Output Type 3 (Type3) or Type 42 (TrueType)
 matplotlib.rcParams['pdf.fonttype'] = 42
 import matplotlib.backends.backend_pdf as pltBack
 import matplotlib.lines as lines
@@ -48,6 +50,7 @@ import sys
 
 class BadInput(Exception):
   pass
+
 
 def InitArguments(parser):
   parser.add_argument('metrics_file', type=str,
@@ -183,7 +186,6 @@ def DrawAxis(ax, args):
       ))
   ax.plot(thetas, 12 * [1.0], markeredgecolor='grey', marker='o',
           markerfacecolor='grey', linestyle='none')
-  # ax.set_title("Cairo Visualization Wheel", va='bottom')
   ax.set_rmax(1.15)
   ax.set_yticklabels([])
   ax.set_thetagrids(angles, labels=angle_labels, fontsize=8.0)
