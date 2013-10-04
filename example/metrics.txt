@@ -12,6 +12,12 @@
 # Novelty (Redundancy)
 #
 ##############################
+# These data estimated by eye from Alberto Cairo's book
+# "The Functional Art: an introduction to information graphics
+# and visualization." 2013 New Riders, Berkeley, CA, USA.
+# http://www.thefunctionalart.com/
+# Figure 3.2
+##############################
 # Abstraction (Figuration)
 0.8
 # Functionality (Decoration)
