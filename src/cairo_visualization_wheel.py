@@ -241,8 +241,8 @@ def CleanData(data, args):
     args: an argparse arguments object
 
   Returns:
-    plot_data: a numpy array, twelve by 2, one column floats in [0.0, 1.0]
-      and one column floats in [0.0, 2 pi]
+    plot_data: a numpy array, twelve by 2, one column floats in [0.0, 2 pi]
+      and one column floats in [0.0, 1.0]
   """
   plot_data = numpy.empty([12, 2], dtype=float, order='C')
   for i, d in enumerate(data, 0):
